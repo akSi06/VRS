@@ -1,0 +1,29 @@
+.form{
+    position: relative; 
+ }
+ .textbox{
+     border: 2px solid burlywood;
+     border-radius: 5px ;
+     outline: none;
+     background: none;
+     padding: 10px;
+     color: white;
+ }
+ .form-label{
+     position: absolute ;
+     top: 0.6rem;
+     left: 1.4rem;
+     cursor: text;
+     transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in; 
+ }
+ .textbox:focus{
+      border: 2px solid #adffff;
+ }
+ .textbox:focus ~ .form-label,
+ .textbox:not(:placeholder-shown).textbox:not(:focus)~.form-label
+ {
+ top: -0.3rem;
+ left: 0.5rem;
+ font-size: 10px;
+ background: white;
+ }

@@ -1,0 +1,129 @@
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      margin-top: 100px;
+    }
+
+    .jumbotron {
+      background-color: plum;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .car-img {
+      position: absolute;
+      bottom: -150px;
+      right: 0;
+      height: 300px;
+    }
+
+    .animate__animated {
+      animation-duration: 1s;
+      animation-fill-mode: both;
+    }
+
+    .animate__bounceInUp {
+      animation-name: bounceInUp;
+    }
+
+    @keyframes bounceInUp {
+      0%,
+      60%,
+      75%,
+      90%,
+      100% {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
+
+      0% {
+        opacity: 0;
+        transform: translateY(3000px);
+      }
+
+      60% {
+        opacity: 1;
+        transform: translateY(-20px);
+      }
+
+      75% {
+        transform: translateY(10px);
+      }
+
+      90% {
+        transform: translateY(-5px);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      font-size: 36px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    .btn {
+      background-color: lightpink;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .jumbotron {
+        margin-top: 0;
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .car-img {
+        bottom: -100px;
+        height: 200px;
+      }
+    }
+  </style>
+
+<div class="container">
+  <div class="jumbotron text-center">
+    <h1 class="display-4 animate__animated animate__bounceInUp">Congratulations!</h1>
+    <p class="lead">Your car is booked.</p>
+    <p>Thank you for choosing our service. We look forward to serving you.</p>
+    <div class="booking-details mt-3">
+      <h4 class="mb-3">Booking Details:</h4>
+      <div class="row">
+        <div class="col-md-6">
+          <p><strong>From:</strong> {{bFrom}}</p>
+          <p><strong>To:</strong> {{bTo}}</p>
+        </div>
+        <div class="col-md-6">
+          <p><strong>City:</strong> {{bLocation}}</p>
+          <p><strong>Car:</strong> {{bCar}}</p>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-lg mt-3" >Go to Home</button>
+  </div>
+</div>
+
+  <!-- Bootstrap and jQuery JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
